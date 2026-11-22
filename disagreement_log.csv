@@ -1,0 +1,44 @@
+﻿image,label,field,issue,mine,peer,verdict,guideline_rule,action
+D01.png,hand,on_wheel,khác giá trị (IoU=0.77),unknown,no,peer,4.7,"Tay trái đặt trên bụng, thấy rõ không chạm vô lăng: on_wheel unknown -> no"
+D01.png,face,eye_right,khác giá trị (IoU=0.82),unknown,closed,peer,4.5,"Mắt phải thấy rõ mí khép, không bị chai che: eye_right unknown -> closed"
+D01.png,face13,right_eye_outer.occluded,khác cờ,1,0,peer,4.6,Khóe ngoài mắt phải không bị che: bỏ cờ occluded
+D02.png,hand,on_wheel,khác giá trị (IoU=0.66),unknown,no,mine,4.7,"Tay phải với về phía bảng giữa, sát vành vô lăng, không rõ có chạm: giữ unknown"
+D03.png,person,seatbelt,khác giá trị (IoU=0.81),unknown,not_worn,peer,4.7,Không thấy dải dây chéo trên áo khoác sáng màu: seatbelt unknown -> not_worn
+D03.png,hand,box,chỉ có ở peer (hoặc IoU thấp),,,ambiguous,4.2 / 4.7,"Tay phải gần như khuất sau vô lăng; zoom trên CVAT, thấy ngón tay thì thêm hand side=right on_wheel=unknown, không thì giữ; hỏi coach nếu vẫn không chắc"
+D03.png,face13,right_eye_outer.occluded,khác cờ,0,1,peer,4.6,Mắt phải sau tròng kính trong/tóc nhưng đoán chắc vị trí: occluded=1
+D03.png,face13,right_eye_outer.outside,khác cờ,1,0,peer,4.6,Đoán được vị trí nên không dùng outside: outside=0
+D03.png,face13,right_eye_inner.occluded,khác cờ,0,1,peer,4.6,"Khóe trong mắt phải bị gọng kính che, vẫn đoán chắc vị trí: occluded=1"
+D05.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.23,,peer,4.4-5,"Box face của mình ôm cả tóc (lỏng): thu box về vùng mặt thấy được ~[881,388,975,518]; giữ glasses=unknown (kính đang cầm tay)"
+D05.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.4-5,"Box face của mình ôm cả tóc (lỏng): thu box về vùng mặt thấy được ~[881,388,975,518]; giữ glasses=unknown (kính đang cầm tay)"
+S01_ir.png,child_seat,occupied,khác giá trị (IoU=0.94),unknown,no,mine,4.4-1 / 4.8,"Ghế bị phủ chăn, không thấy bên trong: giữ unknown"
+S01_ir.png,face,eye_left,khác giá trị (IoU=0.90),open,unknown,mine,4.5,"Mặt nhìn thẳng camera, thấy khe mắt mở: giữ open"
+S01_ir.png,face,eye_right,khác giá trị (IoU=0.90),open,unknown,mine,4.5,Thấy khe mắt mở: giữ open
+S01_ir.png,face,glasses,khác giá trị (IoU=0.90),none,unknown,mine,4.5,"Vùng mắt rõ, không đeo kính: giữ none"
+S01_rgb.png,child_seat,occupied,khác giá trị (IoU=0.96),unknown,no,mine,4.4-1 / 4.8,"Ghế bị phủ chăn, không thấy bên trong: giữ unknown"
+S01_rgb.png,face,eye_left,khác giá trị (IoU=0.96),open,unknown,mine,4.5,"Mặt nhìn thẳng camera, thấy khe mắt mở: giữ open"
+S01_rgb.png,face,eye_right,khác giá trị (IoU=0.96),open,unknown,mine,4.5,Thấy khe mắt mở: giữ open
+S01_rgb.png,face,glasses,khác giá trị (IoU=0.96),none,unknown,mine,4.5,"Vùng mắt rõ, không đeo kính: giữ none"
+S02_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box person, báo coach"
+S02_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box person, báo coach"
+S03_ir.png,child_seat,occupied,khác giá trị (IoU=0.94),yes,unknown,mine,4.8 (đã sửa guideline: thêm occupied=yes),Giữ occupied=yes: ghế có trẻ em ngồi; guideline 4.8 và cabin_schema.py đã cập nhật cho phép yes
+S03_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box face, báo coach"
+S03_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box person, báo coach"
+S03_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box face, báo coach"
+S03_rgb.png,child_seat,occupied,khác giá trị (IoU=0.94),yes,unknown,mine,4.8 (đã sửa guideline: thêm occupied=yes),Giữ occupied=yes: ghế có trẻ em ngồi; guideline 4.8 và cabin_schema.py đã cập nhật cho phép yes
+S03_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box person, báo coach"
+S04_ir.png,child_seat,occupied,khác giá trị (IoU=0.85),yes,unknown,mine,4.8 (đã sửa guideline: thêm occupied=yes),Giữ occupied=yes: ghế có trẻ em ngồi; guideline 4.8 và cabin_schema.py đã cập nhật cho phép yes
+S04_ir.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box face, báo coach"
+S04_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box person, báo coach"
+S04_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box person, báo coach"
+S04_rgb.png,face,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box face, báo coach"
+S04_rgb.png,child_seat,occupied,khác giá trị (IoU=0.86),yes,unknown,mine,4.8 (đã sửa guideline: thêm occupied=yes),Giữ occupied=yes: ghế có trẻ em ngồi; guideline 4.8 và cabin_schema.py đã cập nhật cho phép yes
+S05_ir.png,object,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,mine,4.8,Cốc trên ghế rear_middle thấy rõ: giữ object type=cup
+S05_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,mine,4.5,"Người quay mặt ra cửa sổ, tóc che, không thấy mắt lẫn mũi: không vẽ face"
+S05_rgb.png,object,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,mine,4.8,Cốc trên ghế rear_middle thấy rõ: giữ object type=cup
+S05_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,mine,4.5,"Người quay mặt ra cửa sổ, tóc che, không thấy mắt lẫn mũi: không vẽ face"
+S07_ir.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box person, báo coach"
+S07_ir.png,child_seat,occupied,khác giá trị (IoU=0.98),yes,unknown,mine,4.8 (đã sửa guideline: thêm occupied=yes),Giữ occupied=yes: ghế có trẻ em ngồi; guideline 4.8 và cabin_schema.py đã cập nhật cho phép yes
+S07_rgb.png,person,box,chỉ có ở mine (hoặc IoU thấp),IoU=0.00,,peer,"§3 (không có trẻ em; báo coach, không gán)","Hình trẻ em trong ghế trẻ em: xóa box person, báo coach"
+S07_rgb.png,child_seat,occupied,khác giá trị (IoU=0.90),yes,unknown,mine,4.8 (đã sửa guideline: thêm occupied=yes),Giữ occupied=yes: ghế có trẻ em ngồi; guideline 4.8 và cabin_schema.py đã cập nhật cho phép yes
+S08_ir.png,face,gaze_zone,khác giá trị (IoU=0.94),other,road,both_wrong,4.5,"Đầu cúi, mắt nhìn xuống: gaze_zone -> lap"
+S08_rgb.png,face,gaze_zone,khác giá trị (IoU=0.93),other,road,both_wrong,4.5,"Đầu cúi, mắt nhìn xuống: gaze_zone -> lap"

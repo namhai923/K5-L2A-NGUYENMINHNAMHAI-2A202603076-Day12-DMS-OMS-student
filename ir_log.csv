@@ -1,0 +1,10 @@
+frame_id,source,phenomenon,affected_field,effect_on_label
+S05_ir,IR_sim,"Ba lô đỏ ở RGB thành xám trên IR-sim, mất màu; vẫn thấy quai và túi trước",object.type,"nhận bằng hình dạng (quai, túi trước) -> giữ type=bag, không dựa vào màu (4.4-4)"
+S05_ir,IR_sim,"Cốc tối trên đệm ghế sáng vẫn tương phản rõ trên IR-sim",object.type,"giữ object type=cup ở rear_middle như RGB; IR-sim không làm mất vật nhỏ trong cảnh này"
+S01_ir,IR_sim,"Chăn phủ ghế trẻ em mất hoa văn màu, chỉ còn khối xám; không thấy bên trong ghế",child_seat.occupied,"giữ occupied=unknown; không suy từ ảnh RGB cùng cảnh (4.4-1)"
+S08_ir,IR_sim,"Mắt người ngồi vẫn thấy rõ như RGB; IR-sim không tái hiện chói kính hay mắt sáng của NIR thật",eye_left / eye_right,"giữ open theo khe mắt thấy được; không ghi hiện tượng NIR từ ảnh S## (§3)"
+D04,real_IR,"Khung NIR rất tối, ánh sáng giảm mạnh về phía mép ảnh; vùng mắt sau tròng kính gần như đen",eye_left / eye_right,"ghi unknown cho cả hai mắt; glasses=clear vì thấy gọng và nhìn xuyên được tròng"
+D03,real_IR,"Tròng kính trong và tóc che vùng mắt phải; không thấy rõ mí",eye_right / face13 right_eye_*,"eye_right=unknown; right_eye_outer, right_eye_inner occluded=1 (đoán chắc vị trí), mí trên/dưới outside=1"
+D05,real_IR,"Kính râm cầm trên tay, trên NIR tròng gần trong suốt; mặt quay đi, tóc che mắt",glasses / eye_left / eye_right,"glasses=unknown (không phân biệt kính râm/kính trong trên NIR); hai mắt unknown"
+D06,real_IR,"Áo sáng màu phản xạ mạnh NIR, dây an toàn tối nổi rõ thành dải chéo từ vai xuống hông",seatbelt,"thấy rõ dải chéo -> worn_correct"
+D01,real_IR,"Đầu ngửa khi uống nước, mặt đủ sáng; thấy rõ hai mí khép, chai nước không che mắt",eye_left / eye_right,"ghi closed cho cả hai mắt (mô tả khung này, không phải buồn ngủ) (4.5)"
